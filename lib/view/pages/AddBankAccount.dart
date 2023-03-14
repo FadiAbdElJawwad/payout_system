@@ -304,6 +304,7 @@ class AddBankAccount extends StatelessWidget {
             const SizedBox(height: 16),
             Button(
               text: 'Back',
+              sizeText: 16,
               BackgroundColor: Colors.white,
               TextColor: Colors.black,
               onTap: () {

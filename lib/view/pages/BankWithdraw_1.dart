@@ -5,27 +5,15 @@ import 'package:payout_system/view/shared/Button.dart';
 import '../../core/constant/ColorManager.dart';
 
 
-class BankWithdraw extends StatefulWidget {
-  const BankWithdraw({Key? key}) : super(key: key);
+class BankWithdraw_1 extends StatefulWidget {
+  const BankWithdraw_1({Key? key}) : super(key: key);
 
   @override
-  State<BankWithdraw> createState() => _BankWithdrawState();
+  State<BankWithdraw_1> createState() => _BankWithdraw_1State();
 }
 
-class _BankWithdrawState extends State<BankWithdraw> {
-  FocusNode _focusNode = FocusNode();
+class _BankWithdraw_1State extends State<BankWithdraw_1> {
 
-
-  @override
-  void initState() {
-    super.initState();
-
-    _focusNode.addListener(() {
-      if (!_focusNode.hasFocus) {
-        FocusScope.of(context).requestFocus(_focusNode);
-      }
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +25,7 @@ class _BankWithdrawState extends State<BankWithdraw> {
           elevation: 0,
           centerTitle: true,
           title: const Text(
-            'Balance',
+            'Bank Withdraw',
             style: TextStyle(fontSize: 20, color: Colors.black),
           ),
           leading: IconButton(onPressed: () {
@@ -60,21 +48,22 @@ class _BankWithdrawState extends State<BankWithdraw> {
                     letterSpacing: 1.3),
               ),
               const SizedBox(height: 8),
-              SizedBox(
+              const SizedBox(
                 height: 43,
-                width: 132,
+                // width: 132,
                 child: TextField(
-                  focusNode: _focusNode,
+                  textAlign: TextAlign.center,
+                  // focusNode: _focusNode,
                   autofocus: true,
                   keyboardType: TextInputType.number,
-                  showCursor: false,
-                  style: const TextStyle(
+                  showCursor: true,
+                  style: TextStyle(
                     fontSize: 30,
                     color: Colors.black,
                     fontWeight: FontWeight.w500,
                   ),
-                  decoration: const InputDecoration(
-                    hintText: '  \$300.00',
+                  decoration: InputDecoration(
+                    hintText: ' \$300.00',
                     border: InputBorder.none,
                     hintStyle: TextStyle(
                       fontSize: 30,
@@ -101,13 +90,15 @@ class _BankWithdrawState extends State<BankWithdraw> {
                 ),
               ),
               const SizedBox(height: 144),
-              Button(
-                  text: 'Continue',
-                  onTap: () {
-                    AppRouter.goTo(screenName: ScreenName.AddBankAccount);
-                  },
-                  BackgroundColor: ColorManager.mainColor,
-                  TextColor: Colors.white)
+              Padding(padding: const EdgeInsets.symmetric(horizontal: 32),
+                child: Button(
+                    text: 'Continue',
+                    onTap: () {
+                      AppRouter.goTo(screenName: ScreenName.AddBankAccount);
+                    },
+                    BackgroundColor: ColorManager.mainColor,
+                    TextColor: Colors.white),
+              )
             ],
           ),
         ),

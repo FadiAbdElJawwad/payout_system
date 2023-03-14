@@ -5,10 +5,10 @@ import 'package:payout_system/core/constant/ColorManager.dart';
 import 'package:payout_system/core/constant/ImagesManager.dart';
 import 'package:payout_system/routes/app_router.dart';
 import 'package:payout_system/routes/screen_name.dart';
-import '../../data/model/BalancePage_1Model.dart';
+import '../../data/model/BalanceModel.dart';
 
-class BalancePage extends StatelessWidget {
-  const BalancePage({Key? key}) : super(key: key);
+class Balance extends StatelessWidget {
+  const Balance({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -84,52 +84,31 @@ class BalancePage extends StatelessWidget {
                                       ),
                                       const SizedBox(height: 16),
                                       const Divider(),
-                                      const SizedBox(height: 18),
-                                      InkWell(
+
+                                      ListTile(
                                         onTap: () {
-                                          AppRouter.goTo(screenName: ScreenName.BankWithdraw);
+                                          AppRouter.goTo(screenName: ScreenName.BankWithdraw_1);
                                         },
-                                        child: Row(
-                                          children: [
-                                            const Text(
-                                              'Bank',
-                                              style: TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            const SizedBox(
-                                              width: 30,
-                                            ),
-                                            SvgPicture.asset(
-                                              ImagesManager.Bank,
-                                              width: 25,
-                                              height: 25,
-                                            )
-                                          ],
+                                        leading: SvgPicture.asset(
+                                          ImagesManager.Bank, height: 25,
+                                          width: 25,),
+                                        title: const Text(
+                                          'Bank',
+                                          style: TextStyle(fontSize: 15,
+                                              fontWeight: FontWeight.bold),
                                         ),
                                       ),
-                                      const SizedBox(height: 30),
-                                      InkWell(
+                                      ListTile(
                                         onTap: () {},
-                                        child: Row(
-                                          children: [
-                                            const Text(
-                                              'Cash',
-                                              style: TextStyle(
-                                                  fontSize: 15,
-                                                  fontWeight: FontWeight.bold),
-                                            ),
-                                            const SizedBox(
-                                              width: 30,
-                                            ),
-                                            SvgPicture.asset(
-                                              ImagesManager.Cash,
-                                              width: 25,
-                                              height: 25,
-                                            )
-                                          ],
+                                        leading: SvgPicture.asset(
+                                          ImagesManager.Cash, height: 25,
+                                          width: 25,),
+                                        title: const Text(
+                                          'Cash',
+                                          style: TextStyle(fontSize: 15,
+                                              fontWeight: FontWeight.bold),
                                         ),
-                                      )
+                                      ),
                                     ],
                                   ),
                                 ));
@@ -173,7 +152,7 @@ class BalancePage extends StatelessWidget {
                   ),
                   child: ListView.separated(
                     shrinkWrap: true,
-                    itemCount: balancePage_1Model.length,
+                    itemCount: balanceModel.length,
                     separatorBuilder: (context, index) => const Divider(),
                     itemBuilder: (context, i) {
                       return Padding(
@@ -185,14 +164,14 @@ class BalancePage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(balancePage_1Model[i].office!,
+                                Text(balanceModel[i].office!,
                                     style: const TextStyle(
                                         fontSize: 13,
                                         fontWeight: FontWeight.bold)),
                                 const SizedBox(
                                   height: 10,
                                 ),
-                                Text(balancePage_1Model[i].date!,
+                                Text(balanceModel[i].date!,
                                     style: const TextStyle(
                                         fontSize: 9,
                                         color: ColorManager.secondaryTextColor))
@@ -201,7 +180,7 @@ class BalancePage extends StatelessWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                Text(balancePage_1Model[i].price!,
+                                Text(balanceModel[i].price!,
                                     style: const TextStyle(
                                         fontSize: 15,
                                         fontWeight: FontWeight.bold)),
@@ -209,12 +188,12 @@ class BalancePage extends StatelessWidget {
                                   height: 4,
                                 ),
                                 Text(
-                                  balancePage_1Model[i].status!,
+                                  balanceModel[i].status!,
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.bold,
                                       color:
-                                      balancePage_1Model[i].statusClolor),
+                                      balanceModel[i].statusClolor),
                                 )
                               ],
                             )

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-  const Button({
+   Button({
     required this.text,
     required this.onTap,
     required this.BackgroundColor,
     required this.TextColor,
     this.width = double.maxFinite,
+    this.sizeText =20,
     Key? key,
   }) : super(key: key);
   final String text;
@@ -14,6 +15,7 @@ class Button extends StatelessWidget {
   final  BackgroundColor;
   final  TextColor;
   final Function()? onTap;
+  double sizeText;
 
   @override
   Widget build(BuildContext context) {
@@ -21,11 +23,10 @@ class Button extends StatelessWidget {
       onPressed: onTap,
       style: ElevatedButton.styleFrom(
         backgroundColor:  BackgroundColor,
-        // shape: const StadiumBorder(),
         fixedSize: Size(width, 44),
       ),
       child:
-      Text(text, style:  TextStyle(fontSize: 20, color: TextColor)),
+      Text(text, style:  TextStyle(fontSize:sizeText, color: TextColor)),
     );
   }
 }
