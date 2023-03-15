@@ -5,7 +5,8 @@ class ScreenName {
   static const String AddBankAccount = 'AddBankAccountScreen';
   static const String VerificationCode = 'VerificationCode';
   static const String BankAccount = 'BankAccount';
-  static const String WithdrawPreview = 'WithdrawPreview';
+  static const String WithdrawalPreview = 'WithdrawalPreview';
+  static const String BankWithdrawal = 'BankWithdrawal';
 
 
 

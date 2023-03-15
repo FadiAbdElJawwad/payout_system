@@ -18,7 +18,7 @@ List<BalanceModel> balanceModel = [
       price: '\$567',
       date: '12:30 AM, 21 Aug',
       status: 'Pending',
-      statusClolor:  const Color(0xffDAA545)
+      statusClolor:  ColorManager.pendingColor
   ),
   BalanceModel(
       office: "Bank of Palestine",
@@ -41,7 +41,7 @@ List<BalanceModel> balanceModel = [
   ),
   BalanceModel(
     office: "Bank of Palestine",
-    price: '\$2500',
+    price: '\$200',
     date: '12:30 AM, 21 Aug',
     status: 'Canceled',
       statusClolor:  const Color(0xff929292)

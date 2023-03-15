@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:payout_system/routes/screen_name.dart';
 import '../view/pages/Balance.dart';
-import '../view/pages/BankAccount.dart';
-import '../view/pages/BankWithdraw_2.dart';
-import '../view/pages/BankWithdraw_1.dart';
-import '../view/pages/AddBankAccount.dart';
-import '../view/pages/VerificationCode.dart';
-import '../view/pages/Withdraw Preview.dart';
+import '../view/pages/Bank/BankAccount.dart';
+import '../view/pages/Bank/BankWithdraw_2.dart';
+import '../view/pages/Bank/BankWithdraw_1.dart';
+import '../view/pages/Bank/AddBankAccount.dart';
+import '../view/pages/Bank/VerificationCode.dart';
+import '../view/pages/Bank/WithdrawalPreview.dart';
+import '../view/pages/Bank/BankWithdrawal.dart';
 
 class RouteGenarator {
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
@@ -30,8 +31,11 @@ class RouteGenarator {
         case ScreenName.BankAccount:
         result = const BankAccount();
         break;
-        case ScreenName.WithdrawPreview:
-        result = const WithdrawPreview();
+        case ScreenName.WithdrawalPreview:
+        result = const WithdrawalPreview();
+        break;
+        case ScreenName.BankWithdrawal:
+        result = const BankWithdrawal();
         break;
 
 

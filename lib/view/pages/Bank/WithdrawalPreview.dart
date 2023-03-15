@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:payout_system/core/constant/ImagesManager.dart';
+import 'package:payout_system/routes/screen_name.dart';
 import 'package:payout_system/view/shared/Button.dart';
 
-import '../../core/constant/ColorManager.dart';
-import '../../routes/app_router.dart';
+import '../../../core/constant/ColorManager.dart';
+import '../../../routes/app_router.dart';
 
-class WithdrawPreview extends StatelessWidget {
-  const WithdrawPreview({Key? key}) : super(key: key);
+class WithdrawalPreview extends StatelessWidget {
+  const WithdrawalPreview({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -136,7 +137,9 @@ class WithdrawPreview extends StatelessWidget {
               const SizedBox(height: 47,),
               Button(
                   text: 'Confirm',
-                  onTap: (){},
+                  onTap: (){
+                    AppRouter.goTo(screenName: ScreenName.BankWithdrawal);
+                  },
                   BackgroundColor: ColorManager.mainColor,
                   TextColor: Colors.white
               )
