@@ -3,7 +3,6 @@ import 'package:payout_system/core/constant/ColorManager.dart';
 import 'package:payout_system/core/constant/ImagesManager.dart';
 import 'package:payout_system/routes/screen_name.dart';
 import 'package:pinput/pinput.dart';
-
 import '../../../routes/app_router.dart';
 import '../../shared/Button.dart';
 
@@ -71,7 +70,9 @@ class CashOtp extends StatelessWidget {
                   text: 'Verify',
                   BackgroundColor: ColorManager.mainColor,
                   TextColor: Colors.white,
-                  onTap: () {},
+                  onTap: () {
+                    AppRouter.goTo(screenName: ScreenName.CashWithdrawal);
+                  },
                 )
             )
           ],

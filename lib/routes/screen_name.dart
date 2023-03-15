@@ -14,6 +14,7 @@ class ScreenName {
   static const String Recipients = 'Recipients';
   static const String CashWithdrawalPreview = 'CashWithdrawalPreview';
   static const String CashOtp = 'CashOtp';
+  static const String CashWithdrawal = 'CashWithdrawal';
 
 
 

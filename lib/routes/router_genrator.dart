@@ -12,6 +12,7 @@ import '../view/pages/Cash/AddRecipient.dart';
 import '../view/pages/Cash/CashOtp.dart';
 import '../view/pages/Cash/CashWithdraw_1.dart';
 import '../view/pages/Cash/CashWithdraw_2.dart';
+import '../view/pages/Cash/CashWithdrawal.dart';
 import '../view/pages/Cash/CashWithdrawalPreview.dart';
 import '../view/pages/Cash/Recipients.dart';
 
@@ -62,6 +63,9 @@ class RouteGenarator {
         break;
         case ScreenName.CashOtp:
         result = const CashOtp();
+        break;
+        case ScreenName.CashWithdrawal:
+        result = const CashWithdrawal();
         break;
 
 

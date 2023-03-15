@@ -6,14 +6,14 @@ import '../../../core/constant/ColorManager.dart';
 import '../../../routes/app_router.dart';
 
 
-class BankWithdrawal extends StatefulWidget {
-  const BankWithdrawal({Key? key}) : super(key: key);
+class CashWithdrawal extends StatefulWidget {
+  const CashWithdrawal({Key? key}) : super(key: key);
 
   @override
-  State<BankWithdrawal> createState() => _BankWithdrawalState();
+  State<CashWithdrawal> createState() => _CashWithdrawalState();
 }
 
-class _BankWithdrawalState extends State<BankWithdrawal> {
+class _CashWithdrawalState extends State<CashWithdrawal> {
   @override
   Widget build(BuildContext context) {
 
@@ -71,27 +71,8 @@ class _BankWithdrawalState extends State<BankWithdrawal> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: const [
-                                    Text('Safa Mousa ',
-                                      style: TextStyle(fontSize: 14,
-                                          fontWeight: FontWeight.bold),),
-                                    Text('[Bank of Palestine]',
-                                      style: TextStyle(fontSize: 14,
-                                          color: ColorManager
-                                              .secondaryTextColor),)
-                                  ],
-                                ),
-                                const SizedBox(height: 5,),
-                                const Text('0454 649667 001 3100',
-                                  style: TextStyle(fontSize: 12,
-                                      color: ColorManager.secondaryTextColor),)
-                              ],
-                            ),
-                            SvgPicture.asset(ImagesManager.Bank, height: 30,)
+                            const Text('مكتب الدانا - غزة',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
+                            SvgPicture.asset(ImagesManager.Cash, height: 30,)
                           ],
                         )
                       ],
@@ -150,10 +131,10 @@ class _BankWithdrawalState extends State<BankWithdrawal> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
-                          Text('Bank Account Name',
+                          Text('Office Name',
                             style: TextStyle(fontSize: 13, color: ColorManager
                                 .secondaryTextColor),),
-                          Text('Safa K. Mousa', style: TextStyle(fontSize: 13),)
+                          Text('مكتب الدانا - غزة', style: TextStyle(fontSize: 13),)
                         ],
                       ),
                       const SizedBox(height: 12),
@@ -194,7 +175,7 @@ class _BankWithdrawalState extends State<BankWithdrawal> {
                               ),
                             ),
                             const Text(
-                              'Open your bank account app to ensure \n payment delivery',
+                              'Address: الرمال - تقاطع شارع فلسطين مع الشهداء',
                               style: TextStyle(fontSize: 13),)
                           ],
                         ),
@@ -211,7 +192,24 @@ class _BankWithdrawalState extends State<BankWithdrawal> {
                               ),
                             ),
                             const Text(
-                              'Avoid opening support ticket before expected \n date',
+                              'Working hours from 9:00 am to 7:00 pm',
+                              style: TextStyle(fontSize: 13),)
+                          ],
+                        ),
+                        const SizedBox(height: 15,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(padding: const EdgeInsets.only(right: 8),
+                              child: Container(height: 7, width: 7,
+                                decoration: const BoxDecoration(
+                                    color: Colors.black,
+                                    shape: BoxShape.circle
+                                ),
+                              ),
+                            ),
+                            const Text(
+                              'Bring your ID for identification',
                               style: TextStyle(fontSize: 13),)
                           ],
                         ),
@@ -229,6 +227,23 @@ class _BankWithdrawalState extends State<BankWithdrawal> {
                             ),
                             const Text(
                               'Confirm receiving your payment',
+                              style: TextStyle(fontSize: 13),)
+                          ],
+                        ),
+                        const SizedBox(height: 15,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(padding: const EdgeInsets.only(right: 8),
+                              child: Container(height: 7, width: 7,
+                                decoration: const BoxDecoration(
+                                    color: Colors.black,
+                                    shape: BoxShape.circle
+                                ),
+                              ),
+                            ),
+                            const Text(
+                              'Office fees 0.00',
                               style: TextStyle(fontSize: 13),)
                           ],
                         ),
