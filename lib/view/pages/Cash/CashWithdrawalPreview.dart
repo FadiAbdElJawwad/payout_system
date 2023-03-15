@@ -6,8 +6,8 @@ import 'package:payout_system/view/shared/Button.dart';
 import '../../../core/constant/ColorManager.dart';
 import '../../../routes/app_router.dart';
 
-class WithdrawalPreview extends StatelessWidget {
-  const WithdrawalPreview({Key? key}) : super(key: key);
+class CashWithdrawalPreview extends StatelessWidget {
+  const CashWithdrawalPreview({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -53,25 +53,16 @@ class WithdrawalPreview extends StatelessWidget {
                   children: [
                     Padding(padding: const EdgeInsets.only(left: 26, right: 22),
                       child: SvgPicture.asset(
-                        ImagesManager.Bank, height: 40, width: 40,),
+                        ImagesManager.Office, height: 40, width: 40,),
                     ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Row(
-                          children: const [
-                            Text('Safa Mousa ', style: TextStyle(
-                                fontSize: 16),),
-                            Text('[Bank of Palestine]', style: TextStyle(
-                                fontSize: 16,
-                                color: ColorManager.secondaryTextColor),)
-                          ],
-                        ),
+                            const Text('غزة - مكتب الدانا', style: TextStyle(fontSize: 16),),
                         const SizedBox(height: 5,),
-                        const Text('0452-1064559-001-3100-000',
-                          style: TextStyle(fontSize: 14,
-                              color: ColorManager.secondaryTextColor),)
+                        const Text('الرمال - مفترق شارع فلسطين مع الشهدا',
+                          style: TextStyle(fontSize: 14,),)
                       ],
                     )
                   ],
@@ -79,7 +70,7 @@ class WithdrawalPreview extends StatelessWidget {
               ),
               const SizedBox(height: 12,),
               Container(
-                height: 128,
+                // height: 128,
                 color: Colors.white,
                 padding: const EdgeInsets.symmetric(
                     vertical: 18, horizontal: 30),
@@ -90,10 +81,20 @@ class WithdrawalPreview extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
                         Text(
+                          'Recipients name', style: TextStyle(fontSize: 16,),),
+                        Text('محمد خلف', style: TextStyle(fontSize: 16),)
+                      ],
+                    ),
+                    const SizedBox(height: 12,),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: const [
+                        Text(
                           'Transfer amount', style: TextStyle(fontSize: 16,),),
                         Text('\$300', style: TextStyle(fontSize: 16),)
                       ],
                     ),
+                    const SizedBox(height: 12,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: const [
@@ -110,8 +111,6 @@ class WithdrawalPreview extends StatelessWidget {
                             fontSize: 16, fontWeight: FontWeight.bold),)
                       ],
                     ),
-
-
                   ],
                 ),
               ),
@@ -124,7 +123,7 @@ class WithdrawalPreview extends StatelessWidget {
               const SizedBox(height: 13,),
               Row(
                 children: const [
-                  Text('- Transfers made after 9:00 PM or on weekends \n  takes longer. ')
+                  Text("- Don't go to office till the payment ready." )
                 ],
               ),
               const SizedBox(height: 13,),
@@ -137,7 +136,7 @@ class WithdrawalPreview extends StatelessWidget {
               Button(
                   text: 'Confirm',
                   onTap: (){
-                    AppRouter.goTo(screenName: ScreenName.BankWithdrawal);
+                    AppRouter.goTo(screenName: ScreenName.CashOtp);
                   },
                   BackgroundColor: ColorManager.mainColor,
                   TextColor: Colors.white

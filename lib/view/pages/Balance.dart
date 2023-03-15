@@ -100,7 +100,9 @@ class Balance extends StatelessWidget {
                                           ),
                                         ),
                                         ListTile(
-                                          onTap: () {},
+                                          onTap: () {
+                                            AppRouter.goTo(screenName: ScreenName.CashWithdraw_1);
+                                          },
                                           leading: SvgPicture.asset(
                                             ImagesManager.Cash, height: 25,
                                             width: 25,),
@@ -152,7 +154,7 @@ class Balance extends StatelessWidget {
                       horizontal: 17,
                     ),
                     child: ListView.separated(
-                      physics: NeverScrollableScrollPhysics(),
+                      physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       itemCount: balanceModel.length,
                       separatorBuilder: (context, index) => const Divider(),

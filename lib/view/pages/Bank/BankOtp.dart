@@ -8,8 +8,8 @@ import '../../../routes/app_router.dart';
 import '../../shared/Button.dart';
 
 
-class VerificationCode extends StatelessWidget {
-  const VerificationCode({Key? key}) : super(key: key);
+class BankOtp extends StatelessWidget {
+  const BankOtp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

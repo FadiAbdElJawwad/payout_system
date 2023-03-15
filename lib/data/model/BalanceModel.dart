@@ -47,5 +47,4 @@ List<BalanceModel> balanceModel = [
       statusClolor:  const Color(0xff929292)
   ),
 
-
 ];

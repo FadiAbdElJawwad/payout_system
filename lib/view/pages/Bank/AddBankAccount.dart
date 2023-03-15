@@ -278,8 +278,6 @@ class AddBankAccount extends StatelessWidget {
                                   ],
                                 ),
                               ),
-
-
                             ],
                           ),
                         ));
@@ -297,7 +295,7 @@ class AddBankAccount extends StatelessWidget {
               BackgroundColor: ColorManager.mainColor,
               TextColor: Colors.white,
               onTap: () {
-                AppRouter.goTo(screenName: ScreenName.VerificationCode);
+                AppRouter.goTo(screenName: ScreenName.BankOtp);
               },
             ),
 
