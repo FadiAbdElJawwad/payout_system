@@ -42,6 +42,7 @@ class AddBankAccount extends StatelessWidget {
               SuffixIcon: IconButton(onPressed: () {},
                   icon: const Icon(Icons.keyboard_arrow_down)),
               FillColor: const Color(0xffF3F4F6),
+              Enabled :false,
             ),
             const SizedBox(height: 16),
             const Text(
@@ -176,7 +177,7 @@ class AddBankAccount extends StatelessWidget {
               SuffixIcon: IconButton(onPressed: () {},
                   icon: const Icon(Icons.keyboard_arrow_down)),
               FillColor: const Color(0xffF3F4F6),
-
+              Enabled: false,
             ),
             const SizedBox(height: 16),
             const Text(

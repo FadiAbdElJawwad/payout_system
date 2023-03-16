@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:payout_system/core/constant/ImagesManager.dart';
+import 'package:payout_system/routes/screen_name.dart';
 import 'package:payout_system/view/shared/Button.dart';
 import '../../../core/constant/ColorManager.dart';
 import '../../../data/model/RecipientsModel.dart';
@@ -140,13 +141,15 @@ class Recipients extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: 74,),
+            const SizedBox(height: 74,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Button(
                   text: 'Add',
-                  onTap: () {},
+                  onTap: () {
+                    AppRouter.goTo(screenName: ScreenName.AddRecipient);
+                  },
                   BackgroundColor: Colors.white,
                   TextColor: Colors.blue,
                   width: 150,

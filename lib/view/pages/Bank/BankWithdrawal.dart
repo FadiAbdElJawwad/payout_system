@@ -4,6 +4,7 @@ import 'package:payout_system/core/constant/ImagesManager.dart';
 import 'package:payout_system/view/shared/Button.dart';
 import '../../../core/constant/ColorManager.dart';
 import '../../../routes/app_router.dart';
+import '../../../routes/screen_name.dart';
 
 
 class BankWithdrawal extends StatefulWidget {
@@ -238,7 +239,9 @@ class _BankWithdrawalState extends State<BankWithdrawal> {
               ),
               const SizedBox(height: 40,),
               Button(text: 'Cancel Withdrawal',
-                onTap: () {},
+                onTap: () {
+                  AppRouter.goTo(screenName: ScreenName.BalancePage);
+                },
                 BackgroundColor: Colors.white,
                 TextColor: Colors.black,
                 sizeText: 16,)

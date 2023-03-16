@@ -6,14 +6,13 @@ import '../../core/constant/ColorManager.dart';
 class Text_Field extends StatelessWidget {
   Text_Field({
     this.hint,
-    // required this.obscureText,
     this.width = double.infinity,
     this.PrefixIcon,
     this.SuffixIcon,
     this.keyboardType,
     this.FillColor,
-    // this.Validator,
-    // this.Controller,
+     this.Enabled =true,
+
     Key? key,
     Function(dynamic value)? onSaved,
   }) : super(key: key);
@@ -23,6 +22,7 @@ class Text_Field extends StatelessWidget {
   final PrefixIcon;
   final SuffixIcon;
   final FillColor;
+  final bool Enabled;
 
 
   GlobalKey<FormState> formstate = GlobalKey<FormState>();
@@ -33,7 +33,7 @@ class Text_Field extends StatelessWidget {
           height: 44,
           width: double.infinity,
           child: TextFormField(
-
+            enabled: Enabled,
             keyboardType: keyboardType,
             decoration: InputDecoration(
                 filled: true,

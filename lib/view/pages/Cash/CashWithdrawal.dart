@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:payout_system/core/constant/ImagesManager.dart';
+import 'package:payout_system/routes/screen_name.dart';
 import 'package:payout_system/view/shared/Button.dart';
 import '../../../core/constant/ColorManager.dart';
 import '../../../routes/app_router.dart';
@@ -16,8 +17,6 @@ class CashWithdrawal extends StatefulWidget {
 class _CashWithdrawalState extends State<CashWithdrawal> {
   @override
   Widget build(BuildContext context) {
-
-
     return Scaffold(
         backgroundColor: ColorManager.backGroundColor,
         appBar: AppBar(
@@ -25,7 +24,7 @@ class _CashWithdrawalState extends State<CashWithdrawal> {
           elevation: 0,
           centerTitle: true,
           title: const Text(
-            'Withdrawal Preview',
+            'Withdrawal ',
             style: TextStyle(fontSize: 20, color: Colors.black),
           ),
           leading: IconButton(onPressed: () {
@@ -71,7 +70,8 @@ class _CashWithdrawalState extends State<CashWithdrawal> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text('مكتب الدانا - غزة',style: TextStyle(fontSize: 14,fontWeight: FontWeight.bold),),
+                            const Text('مكتب الدانا - غزة', style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.bold),),
                             SvgPicture.asset(ImagesManager.Cash, height: 30,)
                           ],
                         )
@@ -134,7 +134,8 @@ class _CashWithdrawalState extends State<CashWithdrawal> {
                           Text('Office Name',
                             style: TextStyle(fontSize: 13, color: ColorManager
                                 .secondaryTextColor),),
-                          Text('مكتب الدانا - غزة', style: TextStyle(fontSize: 13),)
+                          Text('مكتب الدانا - غزة',
+                            style: TextStyle(fontSize: 13),)
                         ],
                       ),
                       const SizedBox(height: 12),
@@ -253,7 +254,9 @@ class _CashWithdrawalState extends State<CashWithdrawal> {
               ),
               const SizedBox(height: 40,),
               Button(text: 'Cancel Withdrawal',
-                onTap: () {},
+                onTap: () {
+                  AppRouter.goTo(screenName: ScreenName.BalancePage);
+                },
                 BackgroundColor: Colors.white,
                 TextColor: Colors.black,
                 sizeText: 16,)
