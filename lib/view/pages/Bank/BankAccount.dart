@@ -75,6 +75,7 @@ class _BankAccountState extends State<BankAccount> {
                                   context: context,
                                   builder: (BuildContext context) =>
                                       AlertDialog(
+                                        contentPadding: const EdgeInsets.symmetric(vertical: 1,horizontal: 10),
                                         iconPadding:const EdgeInsets.only(left: 240) ,
                                         icon: IconButton(onPressed: () {
                                           AppRouter.back();
